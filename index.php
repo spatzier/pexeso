@@ -1,4 +1,6 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+// Let bootstrap create Dependency Injection container.
+$container = require __DIR__ . '/app/bootstrap.php';
 
-echo 'up and running';
+// Run application.
+$container->application->run();

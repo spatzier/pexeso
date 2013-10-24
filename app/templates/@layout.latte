@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="robots" content="{$robots}" n:ifset="$robots">
+
+	<title>pexeso</title>
+
+	<link rel="stylesheet" href="{$basePath}/css/screen.css">
+
+	{* <link rel="shortcut icon" href="{$basePath}/favicon.ico"> *}
+	{block head}{/block}
+</head>
+
+<body>
+	<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+
+	{include #content}
+
+	{block scripts}
+	<script src="{$basePath}/js/jquery-1.10.2.min.js"></script>
+	<script src="{$basePath}/js/netteForms.js"></script>
+	<script src="{$basePath}/js/main.js"></script>
+	{/block}
+</body>
+</html>
