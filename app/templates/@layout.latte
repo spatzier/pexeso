@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="pexesoApp">
 <head>
 	<meta charset="UTF-8">
 	<meta name="description" content="">
@@ -7,7 +7,8 @@
 
 	<title>pexeso</title>
 
-	<link rel="stylesheet" href="{$basePath}/css/screen.css">
+	<link rel="stylesheet" href="{$basePath}/css/normalize.css">
+	<link rel="stylesheet" href="{$basePath}/css/main.css">
 
 	{* <link rel="shortcut icon" href="{$basePath}/favicon.ico"> *}
 	{block head}{/block}
@@ -19,8 +20,12 @@
 	{include #content}
 
 	{block scripts}
+	{*
 	<script src="{$basePath}/js/jquery-1.10.2.min.js"></script>
 	<script src="{$basePath}/js/netteForms.js"></script>
+	*}
+	<script src="{$basePath}/js/angular.min.js"></script>
+	<script src="{$basePath}/js/controllers.js"></script>	
 	<script src="{$basePath}/js/main.js"></script>
 	{/block}
 </body>

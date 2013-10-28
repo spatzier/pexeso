@@ -1,3 +1,11 @@
 {block content}
-page
+
+<div id="board" ng-controller="pexesoCtrl">
+	<div class="row clearfix" ng-repeat="row in board">
+		<a href="#" class="tile" ng-repeat="tile in row" ng-click="tileClick(tile.x, tile.y, tile.type)">
+			{l}{l}tile.x +':'+ tile.y +' - '+ tile.type{r}{r}
+		</a>
+	</div>
+</div>
+
 {/block}
